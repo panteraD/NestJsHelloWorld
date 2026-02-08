@@ -1,9 +1,10 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { DatabaseModule } from './database.module'; // Imoport new module
 
 @Module({
-  imports: [],
+  imports: [DatabaseModule], // Add to imports
   controllers: [AppController],
   providers: [AppService],
 })
